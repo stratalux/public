@@ -1,0 +1,93 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "autoscaling:Describe*",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:DescribeStackResources",
+        "cloudformation:GetTemplate",
+        "cloudfront:Get*",
+        "cloudfront:List*",
+        "cloudwatch:Describe*",
+        "cloudwatch:Get*",
+        "cloudwatch:List*",
+        "dynamodb:GetItem",
+        "dynamodb:BatchGetItem",
+        "dynamodb:Query",
+        "dynamodb:Scan",
+        "dynamodb:DescribeTable",
+        "dynamodb:ListTables",
+        "ec2:Describe*",
+        "elasticache:Describe*",
+        "elasticbeanstalk:Check*",
+        "elasticbeanstalk:Describe*",
+        "elasticbeanstalk:List*",
+        "elasticbeanstalk:RequestEnvironmentInfo",
+        "elasticbeanstalk:RetrieveEnvironmentInfo",
+        "elasticloadbalancing:Describe*",
+        "iam:List*",
+        "iam:Get*",
+        "route53:Get*",
+        "route53:List*",
+        "rds:Describe*",
+        "s3:Get*",
+        "s3:List*",
+        "sdb:GetAttributes",
+        "sdb:List*",
+        "sdb:Select*",
+        "ses:Get*",
+        "ses:List*",
+        "sns:Get*",
+        "sns:List*",
+        "sqs:GetQueueAttributes",
+        "sqs:ListQueues",
+        "sqs:ReceiveMessage"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+       {
+      "Action": [
+        "iam:CreateGroup",
+        "iam:DeleteGroup",
+        "iam:DeleteGroupPolicy",
+        "iam:GetAccountSummary",
+        "iam:PutGroupPolicy",
+        "iam:PutUserPolicy",
+        "iam:UpdateGroup"
+      ],
+      "Effect": "Deny",
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Action": [
+        "ec2:CancelSpotInstanceRequests",
+        "ec2:CreateSpotDatafeedSubscription",
+        "ec2:DeleteSpotDatafeedSubscription",
+        "ec2:DescribeReservedInstances",
+        "ec2:DescribeReservedInstancesOfferings",
+        "ec2:DescribeSpotDatafeedSubscription",
+        "ec2:DescribeSpotInstanceRequests",
+        "ec2:DescribeSpotPriceHistory",
+        "ec2:PurchaseReservedInstancesOffering",
+        "ec2:RequestSpotInstances"
+      ],
+      "Effect": "Deny",
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Action": [
+        "*"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+	"Statement": [
+		{
+			"Action": ["iam:CreateGroup", "iam:DeleteGroup", "iam:DeleteGroupPolicy", "iam:GetAccountSummary", "iam:PutGroupPolicy", "iam:PutUserPolicy", "iam:UpdateGroup", "iam:ListAccountAliases", "iam:CreateAccountAliases", "iam:DeleteAccountAliases", "ec2:CancelSpotInstanceRequests", "ec2:CreateSpotDatafeedSubscription", "ec2:DeleteSpotDatafeedSubscription", "ec2:DescribeReservedInstances", "ec2:DescribeReservedInstancesOfferings", "ec2:DescribeSpotDatafeedSubscription", "ec2:DescribeSpotInstanceRequests", "ec2:DescribeSpotPriceHistory", "ec2:PurchaseReservedInstancesOffering", "ec2:RequestSpotInstances"],
+			"Effect": "Deny",
+			"Resource": ["*"]
+		}, {
+			"NotAction": ["iam:GetGroup", "iam:ListGroupPolicies"],
+			"Effect": "Deny",
+			"Resource": ["arn:aws:iam::*:group/Stratalux_*", "arn:aws:iam::*:group/Customer_Admin", "arn:aws:iam::*:group/Software*"]
+		}, {
+			"Effect": "Allow",
+			"NotAction": "iam:*",
+			"Resource": "*"
+		}, {
+			"Action": ["*"],
+			"Effect": "Allow",
+			"Resource": ["*"]
+		}
+	]
+}
+
