@@ -9,8 +9,8 @@
 			"Effect": "Deny",
 			"Resource": ["arn:aws:iam::*:group/Stratalux_*", "arn:aws:iam::*:group/Customer_Admin", "arn:aws:iam::*:group/Software*"]
 		}, {
-			"Effect": "Allow",
 			"NotAction": "iam:*",
+			"Effect": "Allow",
 			"Resource": "*"
 		}, {
 			"Action": ["*"],
